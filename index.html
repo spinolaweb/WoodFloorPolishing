@@ -20,10 +20,46 @@
     wait_for_update: 500
   });
   try{ if(window.WFP_CONSENT_REQUIRED && localStorage.getItem('wfp_consent')==='granted'){ gtag('consent','update',{analytics_storage:'granted'}); } }catch(e){}
+  /* Personal data safety: read ?email= and ?name= (used for Moosend identify), then remove them
+     from the address bar and from what Google Analytics records (GA must never receive emails). */
+  (function(){
+    try{
+      var u=new URL(location.href),p=u.searchParams,dirty=false;
+      window.__wfpEmail=(p.get('email')||'').trim();
+      window.__wfpName=(p.get('name')||'').trim();
+      ['email','name'].forEach(function(k){ if(p.has(k)){ p.delete(k); dirty=true; } });
+      if(dirty && history.replaceState){ history.replaceState(null,'',u.pathname+(u.search||'')+u.hash); }
+      window.__wfpCleanUrl=u.toString();
+    }catch(e){}
+  })();
   gtag('js', new Date());
-  gtag('config', 'G-ZCCW53J2VX');
+  gtag('config', 'G-ZCCW53J2VX', { page_location: window.__wfpCleanUrl || location.href });
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCCW53J2VX"></script>
+
+<!-- Moosend Site Tracking -->
+<script>
+  var MOOSEND_ID = "93658fdc-1151-4cff-8417-df98c418fcc9";
+  /* Loads the Moosend tracker, initializes it, records the page view and identifies the visitor
+     when their email is known (from ?email= in a campaign link, or the offer form). */
+  window.wfpLoadMoosend = function(){
+    if(window.__mooLoaded) return; window.__mooLoaded = true;
+    !function(t,n,e,o,a){function d(t){var n=~~(Date.now()/3e5),o=document.createElement(e);o.async=!0,o.src=t+"?ts="+n;var a=document.getElementsByTagName(e)[0];a.parentNode.insertBefore(o,a)}t.MooTrackerObject=a,t[a]=t[a]||function(){return t[a].q?void t[a].q.push(arguments):void(t[a].q=[arguments])},document.readyState==="complete"?d(o):window.addEventListener("load",d.bind(this,o),!1)}(window,document,"script","https://cdn.stat-track.com/statics/moosend-tracking.min.js","mootrack");
+    mootrack('init', MOOSEND_ID);   /* must be initialized, otherwise it warns and sends nothing */
+    mootrack('trackPageView');      /* track a view of the current page */
+    wfpMooIdentify(window.__wfpEmail, window.__wfpName);
+  };
+  window.wfpMooIdentify = function(email, name){
+    try{
+      if(!window.mootrack || !email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return;
+      if(name){ mootrack('identify', email, name); } else { mootrack('identify', email); }  /* one call only */
+    }catch(e){}
+  };
+  /* Start now, unless consent is required and not yet granted (then the banner starts it). */
+  try{
+    if(!window.WFP_CONSENT_REQUIRED || localStorage.getItem('wfp_consent')==='granted'){ window.wfpLoadMoosend(); }
+  }catch(e){ if(!window.WFP_CONSENT_REQUIRED){ window.wfpLoadMoosend(); } }
+</script>
 <title>WoodFloorPolishing.com is for sale | Premium exact-match .com domain</title>
 <meta name="description" content="WoodFloorPolishing.com is available for $495. An 18-character exact-match .com for flooring, refinishing and floor-care businesses. Buy through GoDaddy, Namecheap, Sedo, Afternic and more.">
 <meta property="og:title" content="WoodFloorPolishing.com is for sale, $495">
@@ -455,7 +491,7 @@ body.lock{overflow:hidden}
 </div>
 
 <div class="consent" id="consent" role="dialog" aria-label="Analytics consent" hidden>
-  <p>This page uses Google Analytics to understand how visitors use it (pages viewed, clicks, device type). No ads, no personal details. Allow anonymous analytics?</p>
+  <p>This page uses Google Analytics and Moosend to understand how visitors use it (pages viewed, clicks, device type). No ads. Allow analytics?</p>
   <div class="row">
     <button class="btn btn-ghost" type="button" id="consentNo">No thanks</button>
     <button class="btn btn-primary" type="button" id="consentYes">Allow</button>
@@ -475,7 +511,11 @@ body.lock{overflow:hidden}
     </div>
     <div class="field">
       <label for="offerName">Your name (optional)</label>
-      <input id="offerName" type="text" autocomplete="name" placeholder="Name or company" enterkeyhint="done">
+      <input id="offerName" type="text" autocomplete="name" placeholder="Name or company" enterkeyhint="next">
+    </div>
+    <div class="field">
+      <label for="offerEmail">Your email (optional)</label>
+      <input id="offerEmail" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="you@company.com" enterkeyhint="done">
     </div>
     <div class="send">
       <button class="btn btn-wa" type="button" id="sendWa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>WhatsApp</button>
@@ -586,11 +626,21 @@ moreBtn.addEventListener("click",function(){
 /* ===== OFFER: WhatsApp or email ===== */
 var back=document.getElementById("sheetBack"),amt=document.getElementById("offerAmount"),nameIn=document.getElementById("offerName"),errEl=document.getElementById("offerErr"),lastFocus=null;
 
-function buildMessage(amount,name){
+function buildMessage(amount,name,email){
   var m="Hi, I'm interested in buying "+DOMAIN+" (listed at $"+ASKING+").\n";
   if(amount){m+="My offer is $"+amount+".\n"}
   if(name){m+="Name: "+name+"\n"}
+  if(email){m+="Email: "+email+"\n"}
   return m+"Please let me know the next steps.";
+}
+function offerEmail(){
+  var v=(document.getElementById("offerEmail").value||"").trim();
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)?v:"";
+}
+function identifyVisitor(){
+  var em=offerEmail();
+  if(em){wfpMooIdentify(em,nameIn.value.trim())}
+  return em;
 }
 function waUrl(text){return "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(text)}
 function mailUrl(text){return "mailto:"+CONTACT_EMAIL+"?subject="+encodeURIComponent("Offer for "+DOMAIN)+"&body="+encodeURIComponent(text)}
@@ -643,17 +693,19 @@ var amtTyped=false;
 amt.addEventListener("input",function(){errEl.classList.remove("show");if(!amtTyped){amtTyped=true;track("offer_amount_typed")}});
 document.getElementById("sendWa").addEventListener("click",function(){
   var a=readAmount();if(a===null)return;
+  var em=identifyVisitor();
   trackLead("whatsapp",a);
-  window.open(waUrl(buildMessage(a,nameIn.value.trim())),"_blank","noopener");
+  window.open(waUrl(buildMessage(a,nameIn.value.trim(),em)),"_blank","noopener");
   closeSheet();offerSent=0;
 });
 document.getElementById("sendMail").addEventListener("click",function(){
   var a=readAmount();if(a===null)return;
+  var em=identifyVisitor();
   trackLead("email",a);
-  window.location.href=mailUrl(buildMessage(a,nameIn.value.trim()));
+  window.location.href=mailUrl(buildMessage(a,nameIn.value.trim(),em));
   closeSheet();offerSent=0;
 });
-[amt,nameIn].forEach(function(el){el.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();el.blur()}})});
+[amt,nameIn,document.getElementById("offerEmail")].forEach(function(el){el.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();el.blur()}})});
 
 /* floor sheen: follows pointer/finger, drifts on its own on touch screens */
 var hero=document.getElementById("hero");
@@ -871,7 +923,7 @@ window.addEventListener("error",function(e){if(errCount++<3)track("js_error",{me
   box.hidden=false;
   function done(v){
     try{localStorage.setItem("wfp_consent",v)}catch(e){}
-    if(v==="granted")gtag("consent","update",{analytics_storage:"granted"});
+    if(v==="granted"){gtag("consent","update",{analytics_storage:"granted"});window.wfpLoadMoosend&&window.wfpLoadMoosend()}
     box.hidden=true;
   }
   document.getElementById("consentYes").addEventListener("click",function(){done("granted")});
