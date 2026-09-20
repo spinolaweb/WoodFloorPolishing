@@ -2,75 +2,88 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#241409">
+<meta name="color-scheme" content="light dark">
 <title>WoodFloorPolishing.com is for sale | Premium exact-match .com domain</title>
 <meta name="description" content="WoodFloorPolishing.com is available for $495. An 18-character exact-match .com for flooring, refinishing and floor-care businesses. Buy through GoDaddy, Namecheap, Sedo, Afternic and more.">
+<meta property="og:title" content="WoodFloorPolishing.com is for sale, $495">
+<meta property="og:description" content="Exact-match .com for flooring, refinishing and floor-care businesses. Fixed price, fast transfer.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23241409'/><text x='50' y='68' font-size='56' text-anchor='middle'>🪵</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --walnut:#241409; --walnut-2:#33200f; --oak:#b9803f; --honey:#e6ad5c;
-  --bg:#f2f3f1; --card:#ffffff; --ink:#1c1510; --muted:#5f574f; --line:#dcd8d0; --accent:#8a5216; --accent-ink:#ffffff;
+  --bg:#f2f3f1; --card:#ffffff; --ink:#1c1510; --muted:#5f574f; --line:#dcd8d0; --accent:#8a5216;
   --display:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif;
   --body:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;
+  --pad:clamp(18px,5vw,32px);
+  --sat:env(safe-area-inset-top,0px); --sab:env(safe-area-inset-bottom,0px);
+  --sal:env(safe-area-inset-left,0px); --sar:env(safe-area-inset-right,0px);
 }
 @media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){--bg:#160d06;--card:#221409;--ink:#f1ebe2;--muted:#b3a698;--line:#3b2a1a;--accent:#e6ad5c;--accent-ink:#241409}
+  :root:not([data-theme="light"]){--bg:#160d06;--card:#221409;--ink:#f1ebe2;--muted:#b3a698;--line:#3b2a1a;--accent:#e6ad5c}
 }
-:root[data-theme="dark"]{--bg:#160d06;--card:#221409;--ink:#f1ebe2;--muted:#b3a698;--line:#3b2a1a;--accent:#e6ad5c;--accent-ink:#241409}
+:root[data-theme="dark"]{--bg:#160d06;--card:#221409;--ink:#f1ebe2;--muted:#b3a698;--line:#3b2a1a;--accent:#e6ad5c}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:16px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
 a{color:inherit}
+button{font:inherit}
 :focus-visible{outline:3px solid var(--honey);outline-offset:3px;border-radius:6px}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 max(var(--pad),var(--sal)) 0 max(var(--pad),var(--sar))}
 
-/* ---------- HERO: the polished floor ---------- */
-.hero{position:relative;overflow:hidden;color:#f6efe4;min-height:100vh;display:flex;flex-direction:column;
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:hidden;color:#f6efe4;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
+  padding-top:var(--sat);
   background:
    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.012 0.9' numOctaves='3' seed='4'/><feColorMatrix values='0 0 0 0 0.05  0 0 0 0 0.02  0 0 0 0 0  0 0 0 0.55 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>"),
    repeating-linear-gradient(90deg,#3a2311 0 118px,#150b04 118px 121px,#452a14 121px 240px,#150b04 240px 243px,#331e0e 243px 372px,#150b04 372px 375px,#4a2d16 375px 490px,#150b04 490px 493px);
-}
+  background-color:#241409}
 .hero::before{content:"";position:absolute;inset:0;pointer-events:none;
   background:radial-gradient(520px circle at var(--mx,70%) var(--my,35%),rgba(255,214,150,.42),rgba(255,214,150,.12) 45%,transparent 70%);
-  mix-blend-mode:screen;transition:background .05s}
-.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(20,10,4,.55),rgba(20,10,4,.15) 40%,rgba(20,10,4,.75))}
+  mix-blend-mode:screen}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(20,10,4,.6),rgba(20,10,4,.2) 40%,rgba(20,10,4,.8))}
 .hero>*{position:relative;z-index:2}
-nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
-.brand{font-family:var(--display);font-weight:700;letter-spacing:.2px;text-decoration:none;font-size:1.05rem}
-.status{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;background:rgba(20,10,4,.6);border:1px solid rgba(230,173,92,.4);padding:6px 14px;border-radius:99px}
+nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 0}
+.brand{font-family:var(--display);font-weight:700;letter-spacing:.2px;text-decoration:none;font-size:1.02rem;min-height:44px;display:inline-flex;align-items:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:.88rem;background:rgba(20,10,4,.65);border:1px solid rgba(230,173,92,.4);padding:6px 14px;border-radius:99px;white-space:nowrap;flex:none}
 .dot{width:8px;height:8px;border-radius:50%;background:#5fd08a;box-shadow:0 0 0 0 rgba(95,208,138,.7);animation:pulse 2s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(95,208,138,0)}100%{box-shadow:0 0 0 0 rgba(95,208,138,0)}}
-.hero-main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:40px 0 56px}
-.for-sale{font-size:1.05rem;color:#e9d6bb;margin-bottom:14px}
-h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,9.2vw,7.6rem);line-height:.95;letter-spacing:-.035em;
-  text-shadow:0 2px 0 rgba(0,0,0,.35),0 18px 50px rgba(0,0,0,.55)}
+.hero-main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:28px 0 40px}
+.for-sale{font-size:1rem;color:#e9d6bb;margin-bottom:14px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(2.7rem,12.5vw,7.6rem);line-height:.96;letter-spacing:-.035em;
+  text-shadow:0 2px 0 rgba(0,0,0,.35),0 18px 50px rgba(0,0,0,.55);overflow-wrap:normal}
+h1 span{display:block}
 h1 .tld{color:var(--honey)}
-.sub{max-width:560px;margin-top:26px;font-size:1.15rem;color:#f1e4cf}
-.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;align-items:center}
+.sub{max-width:34em;margin-top:22px;font-size:1.1rem;color:#f1e4cf}
+.cta-row{display:grid;grid-template-columns:auto auto auto 1fr;gap:12px;margin-top:32px;align-items:center;justify-content:start}
 .price{font-family:var(--display);font-weight:800;font-size:2.4rem;line-height:1;margin-right:10px}
 .price small{display:block;font-family:var(--body);font-weight:500;font-size:.85rem;color:#e0cdb0;margin-top:6px}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:12px;font:600 1rem var(--body);cursor:pointer;text-decoration:none;border:2px solid transparent;transition:transform .15s,background .15s}
-.btn:hover{transform:translateY(-2px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;border-radius:12px;font:600 1rem var(--body);cursor:pointer;text-decoration:none;border:2px solid transparent;transition:transform .15s,background .15s;touch-action:manipulation}
+@media (hover:hover){.btn:hover{transform:translateY(-2px)}}
+.btn:active{transform:scale(.98)}
 .btn-primary{background:var(--honey);color:#241409}
-.btn-primary:hover{background:#f1bb70}
-.btn-ghost{background:rgba(20,10,4,.55);color:#f6efe4;border-color:rgba(246,239,228,.45)}
-.btn-ghost:hover{background:rgba(20,10,4,.8)}
-.fav{min-width:150px;justify-content:center}
+@media (hover:hover){.btn-primary:hover{background:#f1bb70}}
+.btn-ghost{background:rgba(20,10,4,.6);color:#f6efe4;border-color:rgba(246,239,228,.45)}
+@media (hover:hover){.btn-ghost:hover{background:rgba(20,10,4,.85)}}
+.fav{min-width:150px}
 .fav svg{width:20px;height:20px;transition:transform .25s}
 .fav[aria-pressed="true"]{background:#fff;color:#c0283d;border-color:#fff}
 .fav[aria-pressed="true"] svg{fill:#c0283d;stroke:#c0283d;transform:scale(1.2)}
 .fav .count{font-variant-numeric:tabular-nums}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(246,239,228,.25);border:1px solid rgba(246,239,228,.25);border-radius:14px;overflow:hidden;margin-bottom:34px}
-.stats div{background:rgba(20,10,4,.72);padding:18px 20px;backdrop-filter:blur(4px)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(246,239,228,.25);border:1px solid rgba(246,239,228,.25);border-radius:14px;overflow:hidden;margin-bottom:max(30px,calc(var(--sab) + 20px))}
+.stats div{background:rgba(20,10,4,.78);padding:18px 20px}
 .stats b{display:block;font-family:var(--display);font-size:1.7rem;line-height:1.1}
-.stats span{font-size:.88rem;color:#e0cdb0}
+.stats span{font-size:.88rem;color:#e0cdb0;display:block;line-height:1.4;margin-top:2px}
 
 /* ---------- sections ---------- */
 section{padding:88px 0}
-h2{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,4vw,3rem);line-height:1.08;letter-spacing:-.02em;max-width:18ch}
-.lead{color:var(--muted);max-width:60ch;margin-top:16px;font-size:1.08rem}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(1.85rem,6.4vw,3rem);line-height:1.08;letter-spacing:-.02em;max-width:18ch;text-wrap:balance}
+.lead{color:var(--muted);max-width:60ch;margin-top:16px;font-size:1.06rem}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px}
 .card h3{font-family:var(--display);font-size:1.25rem;margin-bottom:8px}
@@ -80,10 +93,10 @@ h2{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,4vw,3rem);l
 .checks li{display:flex;gap:12px;align-items:flex-start}
 .checks svg{flex:none;width:22px;height:22px;margin-top:2px;stroke:var(--accent);fill:none;stroke-width:2.4}
 .uses{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.uses span{border:1px solid var(--line);background:var(--card);padding:9px 16px;border-radius:99px;font-size:.95rem}
+.uses span{border:1px solid var(--line);background:var(--card);padding:8px 15px;border-radius:99px;font-size:.93rem}
 .email-card{background:var(--walnut);color:#f6efe4;border-radius:18px;padding:30px;border:1px solid #4a2d16}
 .email-card h3{font-family:var(--display);font-size:1.2rem;margin-bottom:16px}
-.mail{display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(255,255,255,.07);border-radius:10px;margin-top:10px;font-size:.98rem;overflow-wrap:anywhere}
+.mail{display:flex;align-items:center;gap:10px;min-height:48px;padding:12px 14px;background:rgba(255,255,255,.07);border-radius:10px;margin-top:10px;font-size:.98rem;overflow-wrap:anywhere;text-decoration:none}
 .mail svg{width:18px;height:18px;flex:none;stroke:var(--honey);fill:none;stroke-width:2}
 .email-card p{margin-top:16px;font-size:.9rem;color:#dcc9ab}
 
@@ -92,39 +105,154 @@ h2{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,4vw,3rem);l
 .buy .lead{color:#dcc9ab}
 .buy h2{max-width:22ch}
 .plat{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
-.tile{display:flex;flex-direction:column;justify-content:space-between;gap:16px;min-height:112px;background:#fbfaf7;color:#1c1510;border-radius:14px;padding:18px;text-decoration:none;border:2px solid transparent;transition:transform .15s,border-color .15s,box-shadow .15s}
-.tile:hover{transform:translateY(-3px);border-color:var(--honey);box-shadow:0 12px 28px rgba(0,0,0,.4)}
-.logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:1.08rem;letter-spacing:-.01em;line-height:1.1}
-.logo i{flex:none;width:26px;height:26px;border-radius:7px;display:grid;place-items:center;color:#fff;font-style:normal;font-size:.85rem;font-weight:800}
+.tile{display:flex;flex-direction:column;justify-content:space-between;gap:16px;min-height:112px;background:#fbfaf7;color:#1c1510;border-radius:14px;padding:18px;text-decoration:none;border:2px solid transparent;transition:transform .15s,border-color .15s,box-shadow .15s;touch-action:manipulation}
+@media (hover:hover){.tile:hover{transform:translateY(-3px);border-color:var(--honey);box-shadow:0 12px 28px rgba(0,0,0,.4)}}
+.tile:active{border-color:var(--honey)}
+.logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:1.05rem;letter-spacing:-.01em;line-height:1.15;min-width:0}
+.logo i{flex:none;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;color:#fff;font-style:normal;font-size:.85rem;font-weight:800}
 .tile em{font-style:normal;font-size:.85rem;color:#6a6157;display:flex;justify-content:space-between}
 .tile em b{color:#8a5216;font-weight:600}
+.more{display:none;margin:18px auto 0;width:100%}
 .note{margin-top:26px;font-size:.92rem;color:#c9b595}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px;counter-reset:s}
-.step{position:relative;padding-top:18px;border-top:2px solid var(--oak)}
+.note a{color:var(--honey);font-weight:600}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.step{padding-top:18px;border-top:2px solid var(--oak)}
 .step h3{font-family:var(--display);font-size:1.15rem;margin:12px 0 6px}
 .step p{color:var(--muted)}
 .step small{font-family:var(--display);font-weight:700;color:var(--accent)}
 
-details{border-bottom:1px solid var(--line);padding:20px 0}
-summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.15rem;list-style:none;display:flex;justify-content:space-between;gap:20px}
-summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--accent)}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.12rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:64px;padding:14px 0;touch-action:manipulation}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.6rem;line-height:1;color:var(--accent);flex:none}
 details[open] summary::after{content:"\2212"}
-details p{margin-top:12px;color:var(--muted);max-width:70ch}
-.final{text-align:left}
+details p{padding:0 0 20px;color:var(--muted);max-width:70ch}
 .final .box{background:var(--walnut);color:#f6efe4;border-radius:22px;padding:56px;display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:center}
 .final h2{color:#f6efe4;max-width:16ch}
+.final .price{margin:0}
 footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
-.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,30px);background:#fff;color:#241409;padding:12px 20px;border-radius:12px;font-weight:600;opacity:0;pointer-events:none;transition:.25s;z-index:50;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
+/* sticky mobile bar */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;align-items:center;gap:12px;padding:10px max(14px,var(--sar)) calc(10px + var(--sab)) max(14px,var(--sal));
+  background:rgba(28,16,8,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid rgba(230,173,92,.35);color:#f6efe4;
+  transform:translateY(110%);transition:transform .3s ease}
+.dock.show{transform:none}
+.dock .p{font-family:var(--display);font-weight:800;font-size:1.45rem;line-height:1.05;margin-right:auto}
+.dock .p small{display:block;font:500 .72rem var(--body);color:#dcc9ab;margin-top:2px}
+.dock .btn{min-height:48px;padding:12px 18px}
+.toast{position:fixed;left:50%;bottom:calc(26px + var(--sab));transform:translate(-50%,30px);background:#fff;color:#241409;padding:12px 20px;border-radius:12px;font-weight:600;opacity:0;pointer-events:none;transition:.25s;z-index:60;box-shadow:0 10px 30px rgba(0,0,0,.35);max-width:calc(100vw - 32px);text-align:center}
 .toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* direct contact buttons */
+.direct{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn-wa{background:#25d366;color:#062b14}
+@media (hover:hover){.btn-wa:hover{background:#3fe07c}}
+.btn-mail{background:#fbfaf7;color:#1c1510}
+@media (hover:hover){.btn-mail:hover{background:#fff}}
+.btn svg{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.direct-note{margin-top:14px;font-size:.92rem;color:#c9b595}
+
+/* offer sheet */
+body.lock{overflow:hidden}
+.sheet-back{position:fixed;inset:0;z-index:70;background:rgba(10,5,2,.7);display:none;align-items:center;justify-content:center;padding:20px;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.sheet-back.open{display:flex}
+.sheet{position:relative;width:100%;max-width:470px;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:20px;padding:28px;max-height:calc(100vh - 40px);max-height:calc(100dvh - 40px);overflow-y:auto;overscroll-behavior:contain;animation:rise .25s ease}
+@keyframes rise{from{transform:translateY(18px);opacity:0}to{transform:none;opacity:1}}
+.sheet h3{font-family:var(--display);font-weight:800;font-size:1.5rem;line-height:1.15;letter-spacing:-.02em;padding-right:44px}
+.sheet .sub2{color:var(--muted);font-size:.98rem;margin-top:6px}
+.sheet .x{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:0;background:transparent;color:var(--ink);cursor:pointer;display:grid;place-items:center}
+.sheet .x svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round}
+.field{margin-top:18px}
+.field label{display:block;font-weight:600;font-size:.92rem;margin-bottom:6px}
+.field input{width:100%;min-height:54px;padding:12px 14px;font:500 16px var(--body);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;outline:none;-webkit-appearance:none;appearance:none}
+.field input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(230,173,92,.35)}
+.money{position:relative}
+.money b{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-family:var(--display);font-size:1.2rem;color:var(--muted)}
+.money input{padding-left:32px;font-size:20px;font-weight:700;font-family:var(--display)}
+.chip{margin-top:10px;display:inline-flex;align-items:center;min-height:40px;padding:6px 14px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:.9rem;cursor:pointer}
+.err{display:none;margin-top:8px;color:#c0283d;font-size:.9rem;font-weight:600}
+.err.show{display:block}
+.send{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.send .btn{width:100%;padding:14px 10px}
+.send .btn-mail{background:var(--walnut);color:#f6efe4;border-color:var(--walnut)}
+:root[data-theme="dark"] .send .btn-mail{border-color:var(--line)}
+.sheet .fine{margin-top:14px;font-size:.84rem;color:var(--muted)}
+
+/* ---------- TABLET ---------- */
 @media(max-width:900px){
   .stats{grid-template-columns:repeat(2,1fr)}
   .grid3,.steps,.split{grid-template-columns:1fr}
-  .plat{grid-template-columns:repeat(2,1fr)}
+  .split{gap:40px}
+  .plat{grid-template-columns:repeat(2,1fr);gap:12px}
   section{padding:64px 0}
-  .final .box{padding:34px}
+  .final .box{padding:36px}
+  h2{max-width:none}
 }
-@media(max-width:480px){.plat{grid-template-columns:1fr}.price{width:100%}}
+
+/* ---------- PHONE ---------- */
+@media(max-width:640px){
+  body{padding-bottom:calc(76px + var(--sab))}
+  .hero{background-size:auto,auto;
+    background-image:
+     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.012 0.9' numOctaves='3' seed='4'/><feColorMatrix values='0 0 0 0 0.05  0 0 0 0 0.02  0 0 0 0 0  0 0 0 0.55 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>"),
+     repeating-linear-gradient(90deg,#3a2311 0 62px,#150b04 62px 64px,#452a14 64px 128px,#150b04 128px 130px,#331e0e 130px 196px,#150b04 196px 198px,#4a2d16 198px 258px,#150b04 258px 260px)}
+  .hero::before{background:radial-gradient(70vw circle at var(--mx,70%) var(--my,30%),rgba(255,214,150,.45),rgba(255,214,150,.12) 45%,transparent 72%)}
+  nav{padding:12px 0}
+  .brand{font-size:.95rem}
+  .status{font-size:.8rem;padding:5px 11px}
+  .hero-main{padding:18px 0 28px;justify-content:flex-end}
+  .for-sale{font-size:.95rem;margin-bottom:10px}
+  .sub{font-size:1.02rem;margin-top:18px}
+  .cta-row{grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}
+  .cta-row .price{grid-column:1/-1;margin:0 0 4px;font-size:2.3rem}
+  .cta-row .btn-primary{grid-column:1/-1;min-height:56px;font-size:1.05rem}
+  .cta-row .fav{grid-column:1/-1;min-width:0}
+  .btn{padding:14px 18px}
+  .stats{grid-template-columns:repeat(2,1fr);border-radius:12px}
+  .stats div{padding:14px 14px}
+  .stats b{font-size:1.35rem}
+  .stats span{font-size:.8rem}
+  section{padding:52px 0}
+  .lead{font-size:1rem}
+  .grid3{margin-top:28px;gap:14px}
+  .card{padding:22px;border-radius:14px}
+  .checks{margin-top:22px}
+  .uses{margin-top:22px;gap:8px}
+  .uses span{font-size:.88rem;padding:7px 13px}
+  .email-card{padding:22px;border-radius:16px}
+  .plat{margin-top:28px;gap:10px}
+  .tile{min-height:96px;padding:14px;gap:12px;border-radius:12px}
+  .logo{font-size:.95rem}
+  .logo i{width:26px;height:26px}
+  .tile em{font-size:.78rem}
+  .plat:not(.open) .extra{display:none}
+  .more{display:inline-flex}
+  .steps{margin-top:28px;gap:0}
+  .step{border-top:0;border-left:2px solid var(--oak);padding:2px 0 26px 18px;position:relative}
+  .step::before{content:"";position:absolute;left:-7px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--oak)}
+  .step:last-child{padding-bottom:0}
+  .step h3{margin-top:4px}
+  .final .box{padding:28px 22px;border-radius:18px;gap:22px}
+  .final .box>div{width:100%}
+  .final .box .btn{width:100%}
+  footer{padding:26px 0 30px}
+  .dock{display:flex}
+  .direct{flex-direction:column}
+  .direct .btn{width:100%}
+  .sheet-back{align-items:flex-end;padding:0}
+  .sheet{max-width:none;border-radius:22px 22px 0 0;border-bottom:0;padding:24px 18px calc(22px + var(--sab));max-height:92vh;max-height:92dvh;animation-name:slideup}
+  .sheet::before{content:"";display:block;width:42px;height:4px;border-radius:4px;background:var(--line);margin:-10px auto 16px}
+  @keyframes slideup{from{transform:translateY(100%)}to{transform:none}}
+}
+@media(max-width:360px){
+  .cta-row{grid-template-columns:1fr}
+  .plat{grid-template-columns:1fr}
+  .dock .btn-ghost{display:none}
+}
+@media(max-height:520px) and (orientation:landscape){
+  .hero{min-height:0}
+}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
@@ -139,23 +267,23 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   </div>
   <div class="wrap hero-main">
     <p class="for-sale">This premium .com domain is for sale</p>
-    <h1>WoodFloor<wbr>Polishing<span class="tld">.com</span></h1>
+    <h1><span>WoodFloor</span><span>Polishing<span style="display:inline" class="tld">.com</span></span></h1>
     <p class="sub">The exact name people type when they need their floors sanded, polished and restored. Eighteen letters, no hyphens, no numbers, on the .com everyone trusts.</p>
-    <div class="cta-row">
+    <div class="cta-row" id="ctaRow">
       <div class="price">$495<small>Fixed price. No auction, no hidden fees.</small></div>
       <a class="btn btn-primary" href="#buy">Buy this domain</a>
       <a class="btn btn-ghost" id="offerBtn" href="#">Make an offer</a>
-      <button class="btn btn-ghost fav" id="fav" aria-pressed="false" aria-label="Add WoodFloorPolishing.com to favorites">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-9.5-9.2C1.2 8.6 3 5.5 6.2 5.5c2 0 3.3 1.1 3.8 2 .5-.9 1.8-2 3.8-2 3.2 0 5 3.1 3.7 6.3C19.5 16.4 12 21 12 21z"/></svg>
+      <button class="btn btn-ghost fav" id="fav" type="button" aria-pressed="false" aria-label="Add WoodFloorPolishing.com to favorites">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.5-9.2C1.2 8.6 3 5.5 6.2 5.5c2 0 3.3 1.1 3.8 2 .5-.9 1.8-2 3.8-2 3.2 0 5 3.1 3.7 6.3C19.5 16.4 12 21 12 21z"/></svg>
         <span class="count" id="favCount">67</span> <span id="favLabel">favorites</span>
       </button>
     </div>
   </div>
   <div class="wrap">
     <div class="stats">
-      <div><b>.com</b><span>The top-level domain buyers trust most</span></div>
+      <div><b>.com</b><span>The extension buyers trust most</span></div>
       <div><b>18</b><span>Characters, easy to spell and remember</span></div>
-      <div><b>10K to 100K</b><span>Monthly Google searches for related keywords</span></div>
+      <div><b>10K to 100K</b><span>Monthly searches for related keywords</span></div>
       <div><b>$495</b><span>One price, ready to transfer</span></div>
     </div>
   </div>
@@ -179,10 +307,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <h2>Made for anyone in floor care</h2>
       <p class="lead">One name that works for a solo refinisher or a national brand, and stays useful as the business grows.</p>
       <ul class="checks">
-        <li><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Launch a local lead-generation or booking site in a weekend</span></li>
-        <li><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Scale across cities with location pages under one strong domain</span></li>
-        <li><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Build an authority blog, guide or affiliate site around floor care</span></li>
-        <li><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Hold it as a digital asset. Clean .com names keep their value</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Launch a local lead-generation or booking site in a weekend</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Scale across cities with location pages under one strong domain</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Build an authority blog, guide or affiliate site around floor care</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Hold it as a digital asset. Clean .com names keep their value</span></li>
       </ul>
       <div class="uses">
         <span>Floor refinishing companies</span><span>Sanding contractors</span><span>Flooring stores</span><span>Home services brands</span><span>Franchises</span><span>Product sellers</span><span>Content creators</span>
@@ -190,9 +318,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     </div>
     <aside class="email-card">
       <h3>Professional email comes with it</h3>
-      <div class="mail"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>info@woodfloorpolishing.com</div>
-      <div class="mail"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>quotes@woodfloorpolishing.com</div>
-      <div class="mail"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>hello@woodfloorpolishing.com</div>
+      <div class="mail"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>info@woodfloorpolishing.com</div>
+      <div class="mail"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>quotes@woodfloorpolishing.com</div>
+      <div class="mail"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>hello@woodfloorpolishing.com</div>
       <p>Clean branded addresses build confidence with customers, suppliers and partners.</p>
     </aside>
   </div>
@@ -203,7 +331,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <h2>Buy it on the platform you already trust</h2>
     <p class="lead">WoodFloorPolishing.com is listed across the major domain marketplaces and registrars. Pick your favorite, complete checkout there and the transfer follows that platform's standard, protected process.</p>
     <div class="plat" id="plat"></div>
-    <p class="note">Prefer to skip the marketplace? Use “Make an offer” above and we will arrange a secure transfer directly.</p>
+    <button class="btn btn-ghost more" id="moreBtn" type="button" aria-expanded="false">Show more platforms</button>
+    <p class="note">Prefer to skip the marketplace? Send an offer straight to the owner and we will arrange a secure transfer directly.</p>
+    <div class="direct">
+      <button class="btn btn-primary" type="button" data-offer>Make an offer</button>
+      <a class="btn btn-wa" id="waDirect" href="#" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>WhatsApp</a>
+      <a class="btn btn-mail" id="mailDirect" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email</a>
+    </div>
   </div>
 </section>
 
@@ -211,7 +345,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <div class="wrap">
     <h2>From checkout to your site</h2>
     <div class="steps">
-      <div class="step"><small>Step 1</small><h3>Choose a platform</h3><p>Open the listing on GoDaddy, Namecheap, Sedo, Afternic or any other partner below the price.</p></div>
+      <div class="step"><small>Step 1</small><h3>Choose a platform</h3><p>Open the listing on GoDaddy, Namecheap, Sedo, Afternic or any other partner above.</p></div>
       <div class="step"><small>Step 2</small><h3>Pay $495</h3><p>Check out with the payment methods and buyer protection your chosen platform already offers.</p></div>
       <div class="step"><small>Step 3</small><h3>Receive the domain</h3><p>The domain is transferred to your account. Point it to your website, host or landing page.</p></div>
     </div>
@@ -221,7 +355,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 <section style="padding-top:0">
   <div class="wrap" style="max-width:820px">
     <h2 style="max-width:none">Questions buyers ask</h2>
-    <div style="margin-top:32px">
+    <div style="margin-top:24px;border-top:1px solid var(--line)">
       <details><summary>Is the price negotiable?</summary><p>The listed price is $495. If you are buying several domains or have a specific plan in mind, use “Make an offer” and we will respond quickly.</p></details>
       <details><summary>How is the domain transferred?</summary><p>Through the platform where you buy. Marketplaces such as GoDaddy, Sedo and Afternic handle payment protection and the ownership transfer for you.</p></details>
       <details><summary>Do I need to pay renewal fees?</summary><p>Yes, as with any domain you pay your registrar's normal yearly renewal for a .com. There are no extra fees from us.</p></details>
@@ -231,7 +365,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   </div>
 </section>
 
-<section class="final" style="padding-top:0">
+<section class="final" style="padding-top:0" id="final">
   <div class="wrap">
     <div class="box">
       <h2>Own the name before a competitor does</h2>
@@ -250,12 +384,43 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   </div>
 </footer>
 
+<div class="dock" id="dock" aria-label="Quick actions">
+  <div class="p">$495<small>WoodFloorPolishing.com</small></div>
+  <a class="btn btn-ghost" id="dockOffer" href="#">Offer</a>
+  <a class="btn btn-primary" href="#buy">Buy now</a>
+</div>
+
+<div class="sheet-back" id="sheetBack" aria-hidden="true">
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <button class="x" type="button" id="sheetClose" aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <h3 id="sheetTitle">Make an offer for WoodFloorPolishing.com</h3>
+    <p class="sub2">Enter your offer, then send it by WhatsApp or email. The message is filled in for you.</p>
+    <div class="field">
+      <label for="offerAmount">Your offer (USD)</label>
+      <div class="money"><b>$</b><input id="offerAmount" type="text" inputmode="decimal" autocomplete="off" placeholder="495" enterkeyhint="done"></div>
+      <button class="chip" type="button" id="askingChip">Use asking price: $495</button>
+      <p class="err" id="offerErr" role="alert">Enter an amount greater than 0.</p>
+    </div>
+    <div class="field">
+      <label for="offerName">Your name (optional)</label>
+      <input id="offerName" type="text" autocomplete="name" placeholder="Name or company" enterkeyhint="done">
+    </div>
+    <div class="send">
+      <button class="btn btn-wa" type="button" id="sendWa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>WhatsApp</button>
+      <button class="btn btn-mail" type="button" id="sendMail"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email</button>
+    </div>
+    <p class="fine">Your message opens in WhatsApp or your email app. Nothing is sent until you press send there.</p>
+  </div>
+</div>
+
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 /* ===== EDIT THESE ===== */
 var DOMAIN = "woodfloorpolishing.com";
-var CONTACT_EMAIL = "woodfloorpolishing@contact.com";
+var CONTACT_EMAIL = "rbxabdou@gmail.com";
+var WHATSAPP = "213696837272";   /* international format, digits only (+213 696 83 72 72) */
+var ASKING = 495;
 var BASE_FAVS = 67;
 /* Replace any url with the exact listing link for your domain on that platform. */
 var PLATFORMS = [
@@ -274,28 +439,127 @@ var PLATFORMS = [
  {n:"Enom",c:"#f0a300",t:"e",fg:"#3a2600",u:"https://www.enom.com/"},
  {n:"Register.com",c:"#0064a6",t:"R",u:"https://www.register.com/domain-search?domain="+DOMAIN},
  {n:"Atom",c:"#1b1b1b",t:"a",u:"https://www.atom.com/name/WoodFloorPolishing"},
- {n:"Escrow-safe purchase",c:"#8a5216",t:"$",u:"mailto:"+CONTACT_EMAIL+"?subject="+encodeURIComponent("Buy "+DOMAIN)}
+ {n:"Buy direct",c:"#8a5216",t:"$",u:"#offer"}
 ];
+var VISIBLE_ON_PHONE = 8;
+
 var host=document.getElementById("plat");
-PLATFORMS.forEach(function(p){
+PLATFORMS.forEach(function(p,i){
   var a=document.createElement("a");
-  a.className="tile";a.href=p.u;
+  a.className="tile"+(i>=VISIBLE_ON_PHONE?" extra":"");
+  a.href=p.u;
   if(p.u.indexOf("http")===0){a.target="_blank";a.rel="noopener noreferrer"}
-  a.setAttribute("aria-label","Buy "+DOMAIN+" via "+p.n);
-  a.innerHTML='<span class="logo"><i style="background:'+p.c+';color:'+(p.fg||"#fff")+'">'+p.t+'</i>'+p.n+'</span><em><span>Buy at $495</span><b>Open</b></em>';
+  else if(p.u==="#offer"){a.setAttribute("data-offer","")}
+  a.setAttribute("aria-label",p.u==="#offer"?"Make an offer for "+DOMAIN:"Buy "+DOMAIN+" via "+p.n);
+  a.innerHTML='<span class="logo"><i style="background:'+p.c+';color:'+(p.fg||"#fff")+'">'+p.t+'</i><span>'+p.n+'</span></span><em><span>'+(p.u==="#offer"?"WhatsApp or email":"Buy at $495")+'</span><b>Open</b></em>';
   host.appendChild(a);
 });
 
-/* offer button */
-document.getElementById("offerBtn").href="mailto:"+CONTACT_EMAIL+"?subject="+encodeURIComponent("Offer for "+DOMAIN)+"&body="+encodeURIComponent("Hi, I'm interested in "+DOMAIN+". My offer is $");
+/* show more / less (phones only, CSS hides .extra only on small screens) */
+var moreBtn=document.getElementById("moreBtn");
+moreBtn.addEventListener("click",function(){
+  var open=host.classList.toggle("open");
+  moreBtn.textContent=open?"Show fewer platforms":"Show more platforms";
+  moreBtn.setAttribute("aria-expanded",open?"true":"false");
+});
 
-/* floor sheen follows pointer */
+/* ===== OFFER: WhatsApp or email ===== */
+var back=document.getElementById("sheetBack"),amt=document.getElementById("offerAmount"),nameIn=document.getElementById("offerName"),errEl=document.getElementById("offerErr"),lastFocus=null;
+
+function buildMessage(amount,name){
+  var m="Hi, I'm interested in buying "+DOMAIN+" (listed at $"+ASKING+").\n";
+  if(amount){m+="My offer is $"+amount+".\n"}
+  if(name){m+="Name: "+name+"\n"}
+  return m+"Please let me know the next steps.";
+}
+function waUrl(text){return "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(text)}
+function mailUrl(text){return "mailto:"+CONTACT_EMAIL+"?subject="+encodeURIComponent("Offer for "+DOMAIN)+"&body="+encodeURIComponent(text)}
+
+/* direct buttons (no amount) */
+var genericMsg="Hi, I'm interested in buying "+DOMAIN+". Is it still available?";
+document.getElementById("waDirect").href=waUrl(genericMsg);
+document.getElementById("mailDirect").href=mailUrl(genericMsg);
+
+function openSheet(){
+  lastFocus=document.activeElement;
+  back.classList.add("open");back.setAttribute("aria-hidden","false");
+  document.body.classList.add("lock");
+  errEl.classList.remove("show");
+  setTimeout(function(){amt.focus()},60);
+}
+function closeSheet(){
+  back.classList.remove("open");back.setAttribute("aria-hidden","true");
+  document.body.classList.remove("lock");
+  if(lastFocus&&lastFocus.focus){lastFocus.focus()}
+}
+function readAmount(){
+  var n=parseFloat(String(amt.value).replace(/[^0-9.]/g,""));
+  if(!(n>0)){errEl.classList.add("show");amt.focus();return null}
+  errEl.classList.remove("show");
+  return n%1===0?String(n):n.toFixed(2);
+}
+document.addEventListener("click",function(e){
+  var t=e.target.closest("[data-offer],#offerBtn,#dockOffer");
+  if(t){e.preventDefault();openSheet()}
+});
+["offerBtn","dockOffer"].forEach(function(id){document.getElementById(id).href="#offer"});
+document.getElementById("sheetClose").addEventListener("click",closeSheet);
+back.addEventListener("click",function(e){if(e.target===back)closeSheet()});
+document.addEventListener("keydown",function(e){
+  if(e.key==="Escape"&&back.classList.contains("open")){closeSheet();return}
+  /* keep keyboard focus inside the sheet */
+  if(e.key==="Tab"&&back.classList.contains("open")){
+    var f=back.querySelectorAll("button,input");
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
+  }
+});
+document.getElementById("askingChip").addEventListener("click",function(){amt.value=String(ASKING);errEl.classList.remove("show")});
+amt.addEventListener("input",function(){errEl.classList.remove("show")});
+document.getElementById("sendWa").addEventListener("click",function(){
+  var a=readAmount();if(a===null)return;
+  window.open(waUrl(buildMessage(a,nameIn.value.trim())),"_blank","noopener");
+  closeSheet();
+});
+document.getElementById("sendMail").addEventListener("click",function(){
+  var a=readAmount();if(a===null)return;
+  window.location.href=mailUrl(buildMessage(a,nameIn.value.trim()));
+  closeSheet();
+});
+[amt,nameIn].forEach(function(el){el.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();el.blur()}})});
+
+/* floor sheen: follows pointer/finger, drifts on its own on touch screens */
 var hero=document.getElementById("hero");
+var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var touching=false,idleUntil=0;
+function setSheen(x,y){hero.style.setProperty("--mx",x+"px");hero.style.setProperty("--my",y+"px")}
 hero.addEventListener("pointermove",function(e){
   var r=hero.getBoundingClientRect();
-  hero.style.setProperty("--mx",(e.clientX-r.left)+"px");
-  hero.style.setProperty("--my",(e.clientY-r.top)+"px");
+  setSheen(e.clientX-r.left,e.clientY-r.top);
+  idleUntil=performance.now()+2500;
 });
+if(!reduce && window.matchMedia("(hover:none)").matches){
+  var visible=true;
+  if("IntersectionObserver" in window){new IntersectionObserver(function(en){visible=en[0].isIntersecting}).observe(hero)}
+  (function drift(t){
+    if(visible && t>idleUntil){
+      var w=hero.clientWidth,h=Math.min(hero.clientHeight,window.innerHeight);
+      setSheen(w*(.5+.38*Math.sin(t/2600)),h*(.42+.28*Math.sin(t/3900+1.3)));
+    }
+    requestAnimationFrame(drift);
+  })(0);
+}
+
+/* sticky bottom bar: appears once the hero buttons scroll away, hides near the buy section */
+var dock=document.getElementById("dock");
+var heroCta=false,buyIn=false,finalIn=false;
+function updateDock(){dock.classList.toggle("show",!heroCta && !buyIn && !finalIn)}
+if("IntersectionObserver" in window){
+  new IntersectionObserver(function(e){heroCta=e[0].isIntersecting;updateDock()}).observe(document.getElementById("ctaRow"));
+  new IntersectionObserver(function(e){buyIn=e[0].isIntersecting;updateDock()},{rootMargin:"0px 0px -25% 0px"}).observe(document.getElementById("buy"));
+  new IntersectionObserver(function(e){finalIn=e[0].isIntersecting;updateDock()}).observe(document.getElementById("final"));
+}
 
 /* favorites: 67 -> 68 on click, per-visitor memory */
 var fav=document.getElementById("fav"),cnt=document.getElementById("favCount"),lab=document.getElementById("favLabel"),toast=document.getElementById("toast"),tt;
@@ -311,6 +575,7 @@ fav.addEventListener("click",function(){
   liked=!liked;
   try{localStorage.setItem("wfp_fav",liked?"1":"0")}catch(e){}
   render();
+  if(navigator.vibrate){try{navigator.vibrate(12)}catch(e){}}
   toast.textContent=liked?"Saved to your favorites":"Removed from favorites";
   toast.classList.add("show");clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove("show")},1800);
 });
