@@ -5,6 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#241409">
 <meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+<!-- Google tag (gtag.js) + Consent Mode v2 -->
+<script>
+  /* Set to true to show a cookie/consent banner (recommended if you target EU or UK visitors).
+     false = analytics runs immediately for everyone. Ad storage is always denied (no ads on this page). */
+  window.WFP_CONSENT_REQUIRED = false;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent','default',{
+    ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+    analytics_storage: window.WFP_CONSENT_REQUIRED ? 'denied' : 'granted',
+    wait_for_update: 500
+  });
+  try{ if(window.WFP_CONSENT_REQUIRED && localStorage.getItem('wfp_consent')==='granted'){ gtag('consent','update',{analytics_storage:'granted'}); } }catch(e){}
+  gtag('js', new Date());
+  gtag('config', 'G-ZCCW53J2VX');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCCW53J2VX"></script>
 <title>WoodFloorPolishing.com is for sale | Premium exact-match .com domain</title>
 <meta name="description" content="WoodFloorPolishing.com is available for $495. An 18-character exact-match .com for flooring, refinishing and floor-care businesses. Buy through GoDaddy, Namecheap, Sedo, Afternic and more.">
 <meta property="og:title" content="WoodFloorPolishing.com is for sale, $495">
@@ -13,7 +32,9 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23241409'/><text x='50' y='68' font-size='56' text-anchor='middle'>🪵</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
 <style>
 :root{
   --walnut:#241409; --walnut-2:#33200f; --oak:#b9803f; --honey:#e6ad5c;
@@ -179,6 +200,28 @@ body.lock{overflow:hidden}
 :root[data-theme="dark"] .send .btn-mail{border-color:var(--line)}
 .sheet .fine{margin-top:14px;font-size:.84rem;color:var(--muted)}
 
+/* search data */
+[hidden]{display:none!important}
+#data{padding-top:0}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.kpi{background:var(--walnut);color:#f6efe4;border-radius:16px;padding:24px;border:1px solid #4a2d16}
+.kpi b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(2rem,6vw,2.9rem);line-height:1.05;color:var(--honey);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.kpi span{display:block;margin-top:8px;font-size:.92rem;color:#dcc9ab;line-height:1.45}
+.kw{margin-top:18px;border:1px solid var(--line);border-radius:16px;background:var(--card);overflow:hidden}
+.kw .r{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:12px;padding:14px 20px;align-items:center;border-top:1px solid var(--line)}
+.kw .r:first-child{border-top:0}
+.kw .h{font-weight:600;font-size:.85rem;color:var(--muted);background:var(--bg)}
+.kw .r>*:nth-child(n+2){text-align:right;font-variant-numeric:tabular-nums}
+.kw .r .k{font-weight:600}
+.kw .r i{display:none;font-style:normal;font-size:.75rem;color:var(--muted);font-weight:500}
+.src{margin-top:14px;font-size:.85rem;color:var(--muted)}
+
+/* consent banner (only shown when WFP_CONSENT_REQUIRED = true) */
+.consent{position:fixed;left:12px;right:12px;bottom:calc(12px + var(--sab));z-index:80;max-width:560px;margin:0 auto;background:#1c1108;color:#f6efe4;border:1px solid rgba(230,173,92,.45);border-radius:16px;padding:16px;box-shadow:0 14px 40px rgba(0,0,0,.5);display:grid;gap:12px}
+.consent p{font-size:.9rem;line-height:1.5;color:#e9d6bb}
+.consent .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.consent .btn{min-height:46px;padding:10px 14px;font-size:.95rem}
+
 /* ---------- TABLET ---------- */
 @media(max-width:900px){
   .stats{grid-template-columns:repeat(2,1fr)}
@@ -239,6 +282,13 @@ body.lock{overflow:hidden}
   footer{padding:26px 0 30px}
   .dock{display:flex}
   .direct{flex-direction:column}
+  .kpis{grid-template-columns:1fr;gap:12px;margin-top:26px}
+  .kpi{padding:20px}
+  .kw .r.h{display:none}
+  .kw .r{grid-template-columns:1fr 1fr 1fr;padding:14px 16px;gap:8px 10px}
+  .kw .r .k{grid-column:1/-1;font-size:1rem}
+  .kw .r>*:nth-child(n+2){text-align:left}
+  .kw .r i{display:block}
   .direct .btn{width:100%}
   .sheet-back{align-items:flex-end;padding:0}
   .sheet{max-width:none;border-radius:22px 22px 0 0;border-bottom:0;padding:24px 18px calc(22px + var(--sab));max-height:92vh;max-height:92dvh;animation-name:slideup}
@@ -283,7 +333,7 @@ body.lock{overflow:hidden}
     <div class="stats">
       <div><b>.com</b><span>The extension buyers trust most</span></div>
       <div><b>18</b><span>Characters, easy to spell and remember</span></div>
-      <div><b>10K to 100K</b><span>Monthly searches for related keywords</span></div>
+      <div><b id="statSearchB">Exact match</b><span id="statSearchS">The words customers search for</span></div>
       <div><b>$495</b><span>One price, ready to transfer</span></div>
     </div>
   </div>
@@ -298,6 +348,20 @@ body.lock{overflow:hidden}
       <div class="card"><h3>Trust on first glance</h3><p>A clear, professional .com looks established in search results, on trucks, on invoices and on business cards. It reads as a company, not a side project.</p></div>
       <div class="card"><h3>Simple to say and spell</h3><p>Say it on a phone call once and the customer finds you. No dashes, no creative spelling, no explaining. That saves you referrals you would otherwise lose.</p></div>
     </div>
+  </div>
+</section>
+
+<section id="data" hidden>
+  <div class="wrap">
+    <h2>The search demand behind the name</h2>
+    <p class="lead" id="dataLead">These are the searches people already make for this service. The domain matches them word for word.</p>
+    <div class="kpis">
+      <div class="kpi"><b id="kpiVol">-</b><span id="kpiVolL">Combined monthly searches</span></div>
+      <div class="kpi"><b id="kpiCpc">-</b><span>Average cost per click paid by advertisers</span></div>
+      <div class="kpi"><b id="kpiAds">-</b><span>Estimated monthly ad spend to buy this traffic</span></div>
+    </div>
+    <div class="kw" id="kwTable" role="table" aria-label="Keyword data"></div>
+    <p class="src" id="dataSrc"></p>
   </div>
 </section>
 
@@ -390,6 +454,14 @@ body.lock{overflow:hidden}
   <a class="btn btn-primary" href="#buy">Buy now</a>
 </div>
 
+<div class="consent" id="consent" role="dialog" aria-label="Analytics consent" hidden>
+  <p>This page uses Google Analytics to understand how visitors use it (pages viewed, clicks, device type). No ads, no personal details. Allow anonymous analytics?</p>
+  <div class="row">
+    <button class="btn btn-ghost" type="button" id="consentNo">No thanks</button>
+    <button class="btn btn-primary" type="button" id="consentYes">Allow</button>
+  </div>
+</div>
+
 <div class="sheet-back" id="sheetBack" aria-hidden="true">
   <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
     <button class="x" type="button" id="sheetClose" aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
@@ -443,6 +515,53 @@ var PLATFORMS = [
 ];
 var VISIBLE_ON_PHONE = 8;
 
+/* ===== SEARCH DATA (fill with REAL numbers from Google Keyword Planner, Semrush or Ahrefs) =====
+   The whole "search demand" section stays hidden until "keywords" has at least one row,
+   so no unverified number is ever shown. Example row (replace with your real data):
+   {kw:"wood floor polishing", vol:1000, cpc:1.50, comp:"Medium"}                           */
+var DATA = {
+  source: "Google Keyword Planner",   /* where the numbers come from */
+  period: "",                         /* e.g. "Aug 2026, 12-month average" */
+  location: "",                       /* e.g. "United States" */
+  keywords: [
+    /* {kw:"wood floor polishing", vol:0, cpc:0, comp:"Medium"}, */
+  ]
+};
+(function renderData(){
+  var k=DATA.keywords||[];
+  if(!k.length)return;
+  var vol=0,ads=0;
+  k.forEach(function(x){vol+=x.vol;ads+=x.vol*x.cpc});
+  var avg=vol?ads/vol:0;
+  var n=function(v){return Math.round(v).toLocaleString("en-US")};
+  document.getElementById("kpiVol").textContent=n(vol);
+  document.getElementById("kpiVolL").textContent="Combined monthly searches across "+k.length+" keyword"+(k.length>1?"s":"");
+  document.getElementById("kpiCpc").textContent="$"+avg.toFixed(2);
+  document.getElementById("kpiAds").textContent="$"+n(ads);
+  document.getElementById("statSearchB").textContent=n(vol);
+  document.getElementById("statSearchS").textContent="Monthly searches for the service";
+  var t=document.getElementById("kwTable");
+  function row(cls,cells){
+    var r=document.createElement("div");r.className="r"+(cls?" "+cls:"");r.setAttribute("role","row");
+    cells.forEach(function(c,i){
+      var s=document.createElement("span");
+      if(i===0)s.className="k";
+      if(c.l){var l=document.createElement("i");l.textContent=c.l;s.appendChild(l)}
+      s.appendChild(document.createTextNode(c.v));
+      r.appendChild(s);
+    });
+    t.appendChild(r);
+  }
+  row("h",[{v:"Keyword"},{v:"Searches / month"},{v:"CPC"},{v:"Competition"}]);
+  k.slice().sort(function(a,b){return b.vol-a.vol}).forEach(function(x){
+    row("",[{v:x.kw},{l:"Searches / month",v:n(x.vol)},{l:"CPC",v:"$"+x.cpc.toFixed(2)},{l:"Competition",v:x.comp||"-"}]);
+  });
+  var src="Source: "+(DATA.source||"keyword research tool")+(DATA.location?", "+DATA.location:"")+(DATA.period?", "+DATA.period:"")+". ";
+  src+="Ad spend is an estimate (monthly searches x average CPC). It shows what advertisers pay for this demand, not a guaranteed traffic or revenue figure.";
+  document.getElementById("dataSrc").textContent=src;
+  document.getElementById("data").hidden=false;
+})();
+
 var host=document.getElementById("plat");
 PLATFORMS.forEach(function(p,i){
   var a=document.createElement("a");
@@ -459,6 +578,7 @@ PLATFORMS.forEach(function(p,i){
 var moreBtn=document.getElementById("moreBtn");
 moreBtn.addEventListener("click",function(){
   var open=host.classList.toggle("open");
+  track("platforms_toggle",{state:open?"expanded":"collapsed"});
   moreBtn.textContent=open?"Show fewer platforms":"Show more platforms";
   moreBtn.setAttribute("aria-expanded",open?"true":"false");
 });
@@ -482,19 +602,22 @@ document.getElementById("mailDirect").href=mailUrl(genericMsg);
 
 function openSheet(){
   lastFocus=document.activeElement;
+  track("offer_open",{trigger:ctaLocation(lastFocus),has_data_section:document.getElementById("data").hidden?0:1});
+  offerOpened=1;
   back.classList.add("open");back.setAttribute("aria-hidden","false");
   document.body.classList.add("lock");
   errEl.classList.remove("show");
   setTimeout(function(){amt.focus()},60);
 }
 function closeSheet(){
+  track("offer_close",{sent:offerSent?1:0});
   back.classList.remove("open");back.setAttribute("aria-hidden","true");
   document.body.classList.remove("lock");
   if(lastFocus&&lastFocus.focus){lastFocus.focus()}
 }
 function readAmount(){
   var n=parseFloat(String(amt.value).replace(/[^0-9.]/g,""));
-  if(!(n>0)){errEl.classList.add("show");amt.focus();return null}
+  if(!(n>0)){errEl.classList.add("show");track("offer_error",{reason:"empty_amount"});amt.focus();return null}
   errEl.classList.remove("show");
   return n%1===0?String(n):n.toFixed(2);
 }
@@ -515,17 +638,20 @@ document.addEventListener("keydown",function(e){
     else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
   }
 });
-document.getElementById("askingChip").addEventListener("click",function(){amt.value=String(ASKING);errEl.classList.remove("show")});
-amt.addEventListener("input",function(){errEl.classList.remove("show")});
+document.getElementById("askingChip").addEventListener("click",function(){amt.value=String(ASKING);errEl.classList.remove("show");track("offer_use_asking_price",{value:ASKING,currency:"USD"})});
+var amtTyped=false;
+amt.addEventListener("input",function(){errEl.classList.remove("show");if(!amtTyped){amtTyped=true;track("offer_amount_typed")}});
 document.getElementById("sendWa").addEventListener("click",function(){
   var a=readAmount();if(a===null)return;
+  trackLead("whatsapp",a);
   window.open(waUrl(buildMessage(a,nameIn.value.trim())),"_blank","noopener");
-  closeSheet();
+  closeSheet();offerSent=0;
 });
 document.getElementById("sendMail").addEventListener("click",function(){
   var a=readAmount();if(a===null)return;
+  trackLead("email",a);
   window.location.href=mailUrl(buildMessage(a,nameIn.value.trim()));
-  closeSheet();
+  closeSheet();offerSent=0;
 });
 [amt,nameIn].forEach(function(el){el.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();el.blur()}})});
 
@@ -575,10 +701,182 @@ fav.addEventListener("click",function(){
   liked=!liked;
   try{localStorage.setItem("wfp_fav",liked?"1":"0")}catch(e){}
   render();
+  track("favorite_toggle",{state:liked?"on":"off"});
   if(navigator.vibrate){try{navigator.vibrate(12)}catch(e){}}
   toast.textContent=liked?"Saved to your favorites":"Removed from favorites";
   toast.classList.add("show");clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove("show")},1800);
 });
+
+/* ===================================================================
+   ANALYTICS  (GA4 stream "WoodFloorPolishing", G-ZCCW53J2VX)
+   Everything is wrapped in try/catch: an ad-blocker or a GA outage
+   can never break the page.
+   Events sent: landing_context, scroll_depth, section_view, cta_click,
+   marketplace_click, contact_click, offer_open, offer_use_asking_price,
+   offer_amount_typed, offer_error, generate_lead (with $ offer value),
+   offer_close, favorite_toggle, platforms_toggle, faq_toggle,
+   engaged_time, copy_text, js_error, page_summary
+   =================================================================== */
+var T0=Date.now(),maxScroll=0,ctaCount=0,engaged=0,offerOpened=0,offerSent=0,sentSummary=-1;
+
+function track(name,params){
+  try{ if(typeof gtag==="function") gtag("event",name,params||{}); }catch(e){}
+}
+function ctaLocation(el){
+  if(!el||!el.closest)return "unknown";
+  if(el.closest(".sheet"))return "offer_sheet";
+  if(el.closest(".dock"))return "sticky_bar";
+  if(el.closest(".hero"))return "hero";
+  if(el.closest("#buy"))return "buy_section";
+  if(el.closest("#final"))return "final_cta";
+  return "page";
+}
+function trackLead(method,amount){
+  offerSent=1;
+  var v=parseFloat(amount)||0;
+  track("generate_lead",{
+    method:method,value:v,currency:"USD",offer_amount:v,asking_price:ASKING,
+    offer_vs_asking_pct:ASKING?Math.round(v/ASKING*100):0,
+    has_name:nameIn.value.trim()?1:0,lead_source:"offer_form"
+  });
+}
+
+/* who is this visitor: source, device, connection */
+(function landingContext(){
+  try{
+    var q=new URLSearchParams(location.search),ref="(direct)";
+    try{ if(document.referrer) ref=new URL(document.referrer).hostname; }catch(e){ ref="(unknown)"; }
+    var w=window.innerWidth,
+        bucket=w<480?"phone":(w<900?"tablet":"desktop"),
+        touch=window.matchMedia("(hover:none)").matches,
+        dark=window.matchMedia("(prefers-color-scheme: dark)").matches;
+    gtag("set","user_properties",{device_class:bucket,input_type:touch?"touch":"mouse",color_scheme:dark?"dark":"light"});
+    track("landing_context",{
+      referrer_host:ref,
+      utm_source:q.get("utm_source")||"",utm_medium:q.get("utm_medium")||"",
+      utm_campaign:q.get("utm_campaign")||"",utm_content:q.get("utm_content")||"",
+      viewport:w+"x"+window.innerHeight,screen:screen.width+"x"+screen.height,
+      dpr:window.devicePixelRatio||1,language:navigator.language||"",
+      timezone:(window.Intl&&Intl.DateTimeFormat().resolvedOptions().timeZone)||"",
+      connection:(navigator.connection&&navigator.connection.effectiveType)||"unknown",
+      device_class:bucket,has_data_section:document.getElementById("data").hidden?0:1
+    });
+  }catch(e){}
+})();
+
+/* scroll depth */
+var scrollMarks=[10,25,50,75,90,100],scrollFired={},scrollTick=false;
+window.addEventListener("scroll",function(){
+  if(scrollTick)return;scrollTick=true;
+  requestAnimationFrame(function(){
+    scrollTick=false;
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    if(h<=0)return;
+    var p=Math.min(100,Math.round(window.pageYOffset/h*100));
+    if(p>maxScroll)maxScroll=p;
+    for(var i=0;i<scrollMarks.length;i++){
+      var m=scrollMarks[i];
+      if(p>=m&&!scrollFired[m]){scrollFired[m]=1;track("scroll_depth",{percent_scrolled:m,seconds_on_page:Math.round((Date.now()-T0)/1000)})}
+    }
+  });
+},{passive:true});
+
+/* which sections were actually seen */
+if("IntersectionObserver" in window){
+  var seenSec={};
+  var secObs=new IntersectionObserver(function(list){
+    list.forEach(function(en){
+      if(!en.isIntersecting)return;
+      var name=en.target.getAttribute("data-track")||"";
+      if(seenSec[name])return;seenSec[name]=1;
+      track("section_view",{section_name:name,seconds_on_page:Math.round((Date.now()-T0)/1000)});
+      secObs.unobserve(en.target);
+    });
+  },{threshold:.2});
+  [].forEach.call(document.querySelectorAll("header.hero,section,footer"),function(el){
+    var h=el.querySelector("h1,h2");
+    var name=String(el.id||(h&&h.textContent)||el.tagName).replace(/\s+/g," ").trim().slice(0,50);
+    el.setAttribute("data-track",name);
+    secObs.observe(el);
+  });
+}
+
+/* every button and link */
+document.addEventListener("click",function(e){
+  try{
+    var el=e.target&&e.target.closest?e.target.closest("a,button"):null;
+    if(!el)return;
+    var href=el.getAttribute("href")||"",loc=ctaLocation(el);
+    var text=String(el.getAttribute("aria-label")||el.textContent||"").replace(/\s+/g," ").trim().slice(0,60);
+    ctaCount++;
+    if(el.classList.contains("tile")&&href!=="#offer"){
+      var tiles=[].slice.call(document.querySelectorAll(".tile")),nm=el.querySelector(".logo span:last-child");
+      track("marketplace_click",{platform:nm?nm.textContent:text,position:tiles.indexOf(el)+1,cta_location:loc});
+    }
+    var method=href.indexOf("wa.me")>-1?"whatsapp":(href.indexOf("mailto:")===0?"email":"");
+    if(method)track("contact_click",{method:method,cta_location:loc});
+    track("cta_click",{cta_text:text,cta_location:loc,link_url:href.slice(0,120)});
+  }catch(err){}
+},true);
+
+/* FAQ opens */
+document.addEventListener("toggle",function(e){
+  var d=e.target;
+  if(d&&d.tagName==="DETAILS"){
+    var s=d.querySelector("summary");
+    track("faq_toggle",{question:s?s.textContent.trim().slice(0,80):"",state:d.open?"open":"closed"});
+  }
+},true);
+
+/* copying the domain or any text */
+document.addEventListener("copy",function(){
+  var s=(window.getSelection&&window.getSelection().toString())||"";
+  track("copy_text",{length:s.length,is_domain:s.toLowerCase().indexOf("woodfloorpolishing")>-1?1:0});
+});
+
+/* real attention time (tab visible only) */
+var timeMarks=[10,30,60,120,300],timeFired={};
+setInterval(function(){
+  if(document.hidden)return;
+  engaged++;
+  for(var i=0;i<timeMarks.length;i++){
+    var m=timeMarks[i];
+    if(engaged>=m&&!timeFired[m]){timeFired[m]=1;track("engaged_time",{seconds:m,max_scroll:maxScroll})}
+  }
+},1000);
+
+/* summary when the visitor leaves or switches app (works on mobile too) */
+function sendSummary(){
+  if(engaged===sentSummary)return;sentSummary=engaged;
+  track("page_summary",{
+    engaged_seconds:engaged,total_seconds:Math.round((Date.now()-T0)/1000),
+    max_scroll:maxScroll,cta_clicks:ctaCount,offer_opened:offerOpened,offer_sent:offerSent,
+    transport_type:"beacon"
+  });
+}
+document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")sendSummary()});
+window.addEventListener("pagehide",sendSummary);
+
+/* JS errors (max 3 per visit) */
+var errCount=0;
+window.addEventListener("error",function(e){if(errCount++<3)track("js_error",{message:String(e.message||"").slice(0,100),line:e.lineno||0})});
+
+/* consent banner (only when WFP_CONSENT_REQUIRED = true in the head) */
+(function consent(){
+  var box=document.getElementById("consent");
+  if(!window.WFP_CONSENT_REQUIRED||!box)return;
+  var saved=null;
+  try{saved=localStorage.getItem("wfp_consent")}catch(e){}
+  if(saved)return;
+  box.hidden=false;
+  function done(v){
+    try{localStorage.setItem("wfp_consent",v)}catch(e){}
+    if(v==="granted")gtag("consent","update",{analytics_storage:"granted"});
+    box.hidden=true;
+  }
+  document.getElementById("consentYes").addEventListener("click",function(){done("granted")});
+  document.getElementById("consentNo").addEventListener("click",function(){done("denied")});
+})();
 </script>
 </body>
 </html>
